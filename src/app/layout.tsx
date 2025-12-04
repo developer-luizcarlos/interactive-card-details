@@ -1,5 +1,12 @@
 import type {Metadata} from "next";
+import {Space_Grotesk} from "next/font/google";
 import "./globals.css";
+
+const space_grotesk = Space_Grotesk({
+	display: "swap",
+	subsets: ["latin"],
+	weight: ["300", "400", "500", "600", "700"],
+});
 
 export const metadata: Metadata = {
 	title: "Frontend Mentor | Interactive Card Details",
@@ -13,7 +20,7 @@ const RootLayout = ({
 }>) => {
 	return (
 		<html lang="en">
-			<body>{children}</body>
+			<body className={space_grotesk.className}>{children}</body>
 		</html>
 	);
 };
