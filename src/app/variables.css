@@ -1,0 +1,16 @@
+:root {
+	--bg-body: hsl(0, 100%, 100%);
+	--bg-button: hsl(278, 68%, 11%);
+	--color-button: hsl(0, 100%, 100%);
+	--border-color-input: hsl(270, 3%, 87%);
+	--color-inline-error-msg: hsl(0, 100%, 66%);
+	--color-input: hsl(278, 68%, 11%);
+	--color-input-placeholder: hsl(212, 12%, 71%);
+	--color-legend: hsl(278, 68%, 11%);
+	--outline-color-error-input: hsl(0, 100%, 66%);
+	--outline-color-input: linear-gradient(
+		90deg,
+		hsl(249, 99%, 64%),
+		hsl(278, 94%, 30%)
+	);
+}
