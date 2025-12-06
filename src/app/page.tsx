@@ -1,5 +1,7 @@
 import Image from "next/image";
 
+import Input from "@/components/Input/Input";
+
 const Home: React.FC = () => {
 	return (
 		<>
@@ -34,7 +36,11 @@ const Home: React.FC = () => {
 					<span className="card--back__cvc">000</span>
 				</div>
 			</div>
-			<form className="form"></form>
+			<div className="form-container">
+				<form className="form">
+					<Input isValidValue={true} />
+				</form>
+			</div>
 		</>
 	);
 };
