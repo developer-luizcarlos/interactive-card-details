@@ -1,6 +1,7 @@
 import type {Metadata} from "next";
 import {Space_Grotesk} from "next/font/google";
 import "./globals.css";
+import "./media.css";
 
 const space_grotesk = Space_Grotesk({
 	display: "swap",

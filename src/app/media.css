@@ -1,0 +1,23 @@
+@media screen and (orientation: portrait) {
+	body {
+		display: initial;
+	}
+
+	.decoration {
+		flex-direction: column-reverse;
+		padding: 1rem;
+	}
+
+	.card {
+		left: 0;
+	}
+
+	.card--front {
+		top: -50px;
+		z-index: 1;
+	}
+
+	.card--back {
+		left: 10%;
+	}
+}
