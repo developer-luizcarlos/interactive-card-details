@@ -24,3 +24,7 @@
 .input--error:focus {
 	border-color: var(--outline-color-error-input);
 }
+
+.input::placeholder {
+	color: var(--color-input-placeholder);
+}
