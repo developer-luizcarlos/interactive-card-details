@@ -26,11 +26,13 @@ const FormField: React.FC<Props> = ({
 			<label htmlFor={inputID} className="form-field__label">
 				{label}
 			</label>
-			{controls.length > 1
-				? controls.map(c => {
-						return c;
-				  })
-				: inputWithID}
+			<div className="form-field__controls-container">
+				{controls.length > 1
+					? controls.map(c => {
+							return c;
+					  })
+					: inputWithID}
+			</div>
 			{!isControlsValueValid && (
 				<p className="form-field__error-msg">{errorLabel}</p>
 			)}
