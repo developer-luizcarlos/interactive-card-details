@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 
 import FormField from "@/components/FormField/FormField";
@@ -37,13 +39,52 @@ const Home: React.FC = () => {
 					<span className="card--back__cvc">000</span>
 				</div>
 			</div>
-			<form className="form">
+			<form className="form" onSubmit={e => e.preventDefault()}>
 				<FormField
-					controls={[<Input isValidValue={true} key={0} />]}
+					controls={[
+						<Input
+							isValidValue={true}
+							key={0}
+							autoFocus
+							placeholder="e.g. Jane Appleseed"
+						/>,
+					]}
 					errorLabel="Cannot be empty"
 					isControlsValueValid={true}
 					label="carholder name"
 				/>
+				<FormField
+					controls={[
+						<Input
+							isValidValue={true}
+							key={0}
+							placeholder="e.g. 1234 5678 9123 0000"
+						/>,
+					]}
+					errorLabel="Cannot be empty"
+					isControlsValueValid={true}
+					label="card number"
+				/>
+				<div className="form-fields-container">
+					<FormField
+						controls={[
+							<Input isValidValue={true} key={0} placeholder="MM" />,
+							<Input isValidValue={true} key={1} placeholder="YY" />,
+						]}
+						errorLabel="Cannot be empty"
+						isControlsValueValid={true}
+						label="exp. date (mm/yy)"
+					/>
+					<FormField
+						controls={[
+							<Input isValidValue={true} key={0} placeholder="e.g. 123" />,
+						]}
+						errorLabel="Cannot be empty"
+						isControlsValueValid={true}
+						label="card number"
+					/>
+				</div>
+				<button className="btn btn--confirm">confirm</button>
 			</form>
 		</>
 	);
