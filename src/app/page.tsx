@@ -1,5 +1,6 @@
 import Image from "next/image";
 
+import FormField from "@/components/FormField/FormField";
 import Input from "@/components/Input/Input";
 
 const Home: React.FC = () => {
@@ -36,11 +37,14 @@ const Home: React.FC = () => {
 					<span className="card--back__cvc">000</span>
 				</div>
 			</div>
-			<div className="form-container">
-				<form className="form">
-					<Input isValidValue={true} />
-				</form>
-			</div>
+			<form className="form">
+				<FormField
+					controls={[<Input isValidValue={true} key={0} />]}
+					errorLabel="Cannot be empty"
+					isControlsValueValid={true}
+					label="carholder name"
+				/>
+			</form>
 		</>
 	);
 };

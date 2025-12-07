@@ -1,0 +1,20 @@
+.form-field {
+	display: flex;
+	flex-direction: column;
+	row-gap: 3px;
+
+	max-width: 500px;
+	width: 90%;
+}
+
+.form-field__label {
+	color: var(--color-legend);
+	font-size: 1rem;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.form-field__error-msg {
+	color: var(--color-inline-error-msg);
+	font-size: 0.85rem;
+}
